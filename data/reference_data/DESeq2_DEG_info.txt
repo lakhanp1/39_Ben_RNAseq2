@@ -1,0 +1,9 @@
+comparison	type	group1	group2	design	samples	drug	concentration	time
+Tet_5uM_12hr_vs_DMSO_12hr	pairwise	Tet_5uM_12hr	DMSO_12hr	condition	DMSO_12hr_1;DMSO_12hr_2;Tet_5uM_12hr_1;Tet_5uM_12hr_2	Tet	5uM	12hr
+Tet_5uM_24hr_vs_DMSO_24hr	pairwise	Tet_5uM_24hr	DMSO_24hr	condition	DMSO_24hr_1;DMSO_24hr_2;Tet_5uM_24hr_1;Tet_5uM_24hr_2	Tet	5uM	24hr
+Tet_15uM_12hr_vs_DMSO_12hr	pairwise	Tet_15uM_12hr	DMSO_12hr	condition	DMSO_12hr_1;DMSO_12hr_2;Tet_15uM_12hr_1;Tet_15uM_12hr_2	Tet	15uM	12hr
+Tet_15uM_24hr_vs_DMSO_24hr	pairwise	Tet_15uM_24hr	DMSO_24hr	condition	DMSO_24hr_1;DMSO_24hr_2;Tet_15uM_24hr_1;Tet_15uM_24hr_2	Tet	15uM	24hr
+ADTet_5uM_12hr_vs_DMSO_12hr	pairwise	ADTet_5uM_12hr	DMSO_12hr	condition	DMSO_12hr_1;DMSO_12hr_2;ADTet_5uM_12hr_1;ADTet_5uM_12hr_2	ADTet	5uM	12hr
+ADTet_5uM_24hr_vs_DMSO_24hr	pairwise	ADTet_5uM_24hr	DMSO_24hr	condition	DMSO_24hr_1;DMSO_24hr_2;ADTet_5uM_24hr_1;ADTet_5uM_24hr_2	ADTet	5uM	24hr
+ADTet_15uM_12hr_vs_DMSO_12hr	pairwise	ADTet_15uM_12hr	DMSO_12hr	condition	DMSO_12hr_1;DMSO_12hr_2;ADTet_15uM_12hr_1;ADTet_15uM_12hr_2	ADTet	15uM	12hr
+ADTet_15uM_24hr_vs_DMSO_24hr	pairwise	ADTet_15uM_24hr	DMSO_24hr	condition	DMSO_24hr_1;DMSO_24hr_2;ADTet_15uM_24hr_1;ADTet_15uM_24hr_2	ADTet	15uM	24hr
