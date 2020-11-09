@@ -70,7 +70,7 @@ parser$add_argument(
 # parser$print_help()
 
 # file_RNAseq_info <- here::here("data", "reference_data", "DESeq2_DEG_info.txt")
-# analysisName <- "ADTet_5_12hr_vs_DMSO_12hr"
+# analysisName <- "Tet_5uM_12hr_vs_DMSO_12hr_new"
 
 args <- parser$parse_args()
 
