@@ -13,7 +13,6 @@
 *.xml
 /Rplots.pdf
 /logs
-sample_info.txt
 /data/*
 !/data/reference_data/
 /analysis

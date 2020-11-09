@@ -54,7 +54,7 @@ geneInfo <- AnnotationDbi::select(
 ) %>% 
   dplyr::rename(geneId = ENSEMBL_VERSION)
 
-design <- ~ batch + condition
+design <- ~ condition
 
 ###########################################################################
 ## import counts data: either by tximport or as raw count matrix
@@ -109,7 +109,7 @@ dds <- DESeq(ddsTxi)
 ###########################################################################
 ## raw counts
 rawCounts <- tibble::rownames_to_column(as.data.frame(counts(dds, normalized = FALSE)), var = "geneId")
-# readr::write_tsv(x = rawCounts, path = paste0(c(outPrefix,".rawCounts.tab"), collapse = ""))
+readr::write_tsv(x = rawCounts, path = paste0(c(outPrefix,".rawCounts.tab"), collapse = ""))
 
 ## FPKM
 fpkmCounts <- tibble::rownames_to_column(as.data.frame(fpkm(dds)), var = "geneId");
@@ -119,7 +119,7 @@ if(all(fpkmCounts$geneId %in% geneInfo$geneId)){
     dplyr::select(geneId, exptInfo$sampleId, everything()) %>% 
     dplyr::filter(!is.na(geneId))
   
-  # readr::write_tsv(x = fpkmCounts, path = paste0(c(outPrefix,".FPKM.tab"), collapse = ""))
+  readr::write_tsv(x = fpkmCounts, path = paste0(c(outPrefix,".FPKM.tab"), collapse = ""))
   
 } else{
   warning(
@@ -132,12 +132,12 @@ if(all(fpkmCounts$geneId %in% geneInfo$geneId)){
 
 ## normalized counts matrix
 normCounts <- tibble::rownames_to_column(as.data.frame(counts(dds, normalized = TRUE)), var = "geneId")
-# readr::write_tsv(x = normCounts, path = paste0(c(outPrefix,".normCounts.tab"), collapse = ""))
+readr::write_tsv(x = normCounts, path = paste0(c(outPrefix,".normCounts.tab"), collapse = ""))
 
 ## r-log normalized counts
 rld <- rlog(dds, blind = FALSE)
 rldCount <- rownames_to_column(as.data.frame(assay(rld)), var = "geneId")
-# readr::write_tsv(x = rldCount, path = paste0(c(outPrefix,".rlogCounts.tab"), collapse = ""))
+readr::write_tsv(x = rldCount, path = paste0(c(outPrefix,".rlogCounts.tab"), collapse = ""))
 
 
 ###########################################################################
